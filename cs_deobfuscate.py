@@ -1,10 +1,5 @@
-ob_pass = input("Enter Practice CS obfuscated password: ")
-split = []
+eNcryPtEd_pASSwOrD = input("Enter Practice CS \"encrypted\" password: ")
 
-for i in range(int(len(ob_pass)/3)):
-    split.append(ob_pass[0 + i*3] + ob_pass[1 + i*3] + ob_pass[2 + i*3])
-
-for i in range(len(split)):
-    split[i] = chr(256 - int(split[i]))
-
-print(*split, sep='')
+from textwrap import wrap
+for i in wrap(eNcryPtEd_pASSwOrD, 3):
+    print(chr(256 - int(i)), end='')
